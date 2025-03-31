@@ -1,0 +1,16 @@
+[Unit]
+Description = Apache Superset Webserver Daemon
+After = network.target
+
+[Service]
+PIDFile = /application_superset/superset/superset-webserver.PIDFile
+Environment=SUPERSET_HOME=/application_superset/superset
+Environment=PYTHONPATH=/application_superset/superset
+WorkingDirectory = /application_superset/superset
+limit-re>
+ExecStart = /application_superset/superset/run_superset.sh
+ExecStop = /bin/kill -s TERM $MAINPID
+
+
+[Install]
+WantedBy=multi-user.target
