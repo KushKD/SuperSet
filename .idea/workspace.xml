@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e994f56f-ee4d-4ffb-8976-5356f3d4e482" name="Changes" comment="">
+    <list default="true" id="e994f56f-ee4d-4ffb-8976-5356f3d4e482" name="Changes" comment="cxv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/notes/config/run_superset.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/notes/config/run_superset.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/notes/config/superset.service" beforeDir="false" afterPath="$PROJECT_DIR$/src/notes/config/superset.service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notes/config/superset_config_py.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/notes/config/superset_config_py.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/notes/new_superset.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/notes/new_superset.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/notes/superset.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +50,9 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="NimRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="Application" factoryName="Application">
       <method v="2">
-        <option name="nim.task.build.to.cache" enabled="true" />
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -65,9 +65,22 @@
       <option name="presentableId" value="Default" />
       <updated>1743403202366</updated>
     </task>
+    <task id="LOCAL-00001" summary="cxv">
+      <option name="closed" value="true" />
+      <created>1743422251977</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743422251977</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.service" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cxv" />
+    <option name="LAST_COMMIT_MESSAGE" value="cxv" />
   </component>
 </project>

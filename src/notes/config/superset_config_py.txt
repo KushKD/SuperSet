@@ -17,7 +17,7 @@ SECRET_KEY = 'CVlhI1LB0VmpDX6CcAsjaM74IGdAtiPvz6sMy8y+EB91Lv0k5jZeY1Yb'
 # you want to explore are managed directly in the web UI
 # The check_same_thread=false property ensures the sqlite client does not attempt
 # to enforce single-threaded access, which may be problematic in some edge cases
-SQLALCHEMY_DATABASE_URI = 'sqlite:////app/superset/superset.db?check_same_thread=false'
+SQLALCHEMY_DATABASE_URI = 'sqlite:////superset_app/superset_one/superset.db?check_same_thread=false'
 
 TALISMAN_ENABLED = False
 WTF_CSRF_ENABLED = False

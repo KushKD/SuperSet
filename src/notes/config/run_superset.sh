@@ -1,6 +1,6 @@
 #!/bin/bash
-export SUPERSET_CONFIG_PATH=/superset_app/superset_test1/superset_config.py
- . /superset_app/superset_test1/superset_env/bin/activate
+export SUPERSET_CONFIG_PATH=/superset_app/superset_one/superset_config.py
+ . /superset_app/superset_one/superset_env/bin/activate
 gunicorn \
       -w 10 \
       -k gevent \
