@@ -1,0 +1,40 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt install postgresql postgresql-contrib -y
+
+#Check Postgres Version
+psql --version
+
+
+#Check weather the service is running or not
+sudo systemctl status postgresql
+
+#If not running
+sudo systemctl start postgresql
+
+#Enable on Boot
+sudo systemctl enable postgresql
+
+
+sudo -i -u postgres
+psql
+ALTER USER postgres WITH PASSWORD 'postgres';
+
+CREATE DATABASE superset_metadata;
+CREATE USER superset_user WITH PASSWORD 'postgres';
+GRANT ALL PRIVILEGES ON DATABASE superset_metadata TO postgres;
+sudo systemctl restart postgresql
+
+#Show all databases
+\list
+
+#Connect to a Databse
+\c database_name
+
+#Show all tables
+\dt
+
+#Exit
+\q
+exit
+
+

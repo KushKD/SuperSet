@@ -1,0 +1,14 @@
+postgresql+psycopg2://postgres:postgres@localhost:5432/superset_metadata
+
+#install postgres
+pip install psycopg2-binary
+
+
+# Re-initialize the metadata DB (if needed)
+superset db upgrade
+
+# Create an admin (if not done already)
+superset fab create-admin
+
+# Initialize roles and permissions
+superset init
