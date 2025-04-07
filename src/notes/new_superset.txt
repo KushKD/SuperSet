@@ -12,12 +12,13 @@
 [10] . superset_env/bin/activate
 [11] pip install --upgrade setuptools pip
 [12] pip install pillow
-[13] pip install apache-superset
+[13] pip install apache-superset     or pip install apache-superset==4.1.2
 [14] touch superset_config.py
 [15] export SUPERSET_CONFIG_PATH=/superset_app/superset_one/superset_config.py
 [16] pip install Flask==2.2.3
 [17] pip install marshmallow_enum     #  pip uninstall Flask
 [18] export FLASK_APP=superset
+export SUPERSET_CONFIG_PATH=/superset_app/superset_one/superset_config.py
 [19] superset db upgrade
 [20] superset fab create-admin
 [21] superset load_examples
@@ -45,6 +46,7 @@ deactivate
 pip uninstall apache-superset flask flask-wtf flask-sqlalchemy flask-appbuilder
 pip freeze | xargs pip uninstall -y
 rm -rf ~/superset2/superset_env
+
 
 
 
