@@ -10,7 +10,7 @@
 [8] sudo apt install python3.8-venv
 [9] python3 -m venv superset_env
 [10] . superset_env/bin/activate
-[11] pip install --upgrade setuptools pip
+[11] pip install --upgrade setuptools     pip install --upgrade pip setuptools wheel
 [12] pip install pillow
 [13] pip install apache-superset     or pip install apache-superset==4.1.2
 [14] touch superset_config.py
