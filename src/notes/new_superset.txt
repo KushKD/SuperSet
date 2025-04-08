@@ -7,12 +7,17 @@
 [5] cd /superset_app
 [6] mkdir superset_one
 [7] cd superset_one
+
+sudo apt install -y python3.9 python3.9-venv python3.9-dev
+
+
+
 [8] sudo apt install python3.8-venv
 [9] python3 -m venv superset_env
 [10] . superset_env/bin/activate
 [11] pip install --upgrade setuptools     pip install --upgrade pip setuptools wheel
 [12] pip install pillow
-[13] pip install apache-superset     or pip install apache-superset==4.1.2
+[13] pip install apache-superset
 [14] touch superset_config.py
 [15] export SUPERSET_CONFIG_PATH=/superset_app/superset_one/superset_config.py
 [16] pip install Flask==2.2.3 or pip install Flask==2.2.5
