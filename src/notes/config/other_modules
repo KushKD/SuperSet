@@ -18,4 +18,8 @@ FEATURE_FLAGS = {
     "EMBEDDED_SUPERSET": True
 }
 
-no module name flask corns
+from superset.stats_logger import DummyStatsLogger
+STATS_LOGGER = DummyStatsLogger()
+
+
+
