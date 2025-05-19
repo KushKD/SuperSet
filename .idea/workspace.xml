@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e994f56f-ee4d-4ffb-8976-5356f3d4e482" name="Changes" comment="SuperSet and Postgres Configured">
-      <change beforePath="$PROJECT_DIR$/src/notes/config/other_modules" beforeDir="false" afterPath="$PROJECT_DIR$/src/notes/config/other_modules" afterDir="false" />
-    </list>
+    <list default="true" id="e994f56f-ee4d-4ffb-8976-5356f3d4e482" name="Changes" comment="React APP" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747647606335</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="React APP">
+      <option name="closed" value="true" />
+      <created>1747648467798</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747648467798</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -143,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cxv" />
     <MESSAGE value="SuperSet and Postgres Configured" />
-    <option name="LAST_COMMIT_MESSAGE" value="SuperSet and Postgres Configured" />
+    <MESSAGE value="React APP" />
+    <option name="LAST_COMMIT_MESSAGE" value="React APP" />
   </component>
 </project>
