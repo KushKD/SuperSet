@@ -63,5 +63,23 @@ npm start
 npm install @superset-ui/embedded-sdk
 
 
+===
+
+function SupersetEmbed() {
+  return (
+    <div style={{ width: "100%", height: "600px" }}>
+      <iframe
+        src="http://<superset-ip>:8088/superset/dashboard/p/<dashboard_id>/?standalone=true"
+        style={{ border: "none", width: "100%", height: "100%" }}
+        title="Superset Dashboard"
+      />
+    </div>
+  );
+}
+
+export default SupersetEmbed;
+
+
+
 
 
