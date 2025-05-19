@@ -1,0 +1,30 @@
+
+## For Showing Trends Over Time
+Line Chart  XAxis alyas Time mandatory
+Area Chart  (fills the area under the line)
+
+## For Comparing Categories
+Bar Chart  vertical/horizontal (sales by product or websites visit by country)
+Column Chart
+Stacked Bar/Column Chart  (composition of each category) (Total Values and the contribution of Sub Categories
+
+## For Showing Propotions/Percentages
+Pie Chart
+Donut Chart
+100% Stacked Bar Donut Chart
+
+## For Showing Distibutions
+Histogram
+Box Plot
+
+## For Showing Relationships
+Scatter Plot
+
+## Other Chart Type
+Table
+Map
+
+
+
+
+#Big Number with Trend Line chart

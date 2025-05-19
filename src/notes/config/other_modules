@@ -1,0 +1,21 @@
+sudo apt-get install postgresql-server-dev-all
+pip install flask-cors
+
+
+ENABLE_CORS = True
+CORS_OPTIONS = {
+    "supports_credentials": True,
+    "origins": ["http://localhost:3000"],
+    "methods": ["GET", "POST", "OPTIONS"],
+    "allow_headers": ["*"],
+}
+
+TALISMAN_ENABLED = False
+WTF_CSRF_ENABLED = False
+
+ALLOW_IFRAME_EMBEDDING = True
+FEATURE_FLAGS = {
+    "EMBEDDED_SUPERSET": True
+}
+
+no module name flask corns

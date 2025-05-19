@@ -52,6 +52,10 @@ sudo systemctl enable superset.service
 sudo systemctl start superset.service
 
 
+# Other Packages to be installed
+sudo apt-get install postgresql-server-dev-all
+
+
 
 deactivate
 pip uninstall apache-superset flask flask-wtf flask-sqlalchemy flask-appbuilder
