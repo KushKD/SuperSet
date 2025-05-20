@@ -96,3 +96,22 @@ find ~/.superset -name '__pycache__' -type d -exec rm -r {} +
 
 
 
+### Postman
+
+wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
+sudo tar -xvzf postman.tar.gz -C /opt
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+cat <<EOF | sudo tee /usr/share/applications/postman.desktop
+[Desktop Entry]
+Name=Postman
+Exec=postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Type=Application
+Categories=Development;
+EOF
+
+postman
+
+
+

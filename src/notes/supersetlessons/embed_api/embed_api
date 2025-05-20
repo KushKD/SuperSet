@@ -1,0 +1,8 @@
+/api/v1/security/login
+
+{
+"password":"superset",
+"provider":"db",
+"refresh":true,
+"username":"superset"
+}
