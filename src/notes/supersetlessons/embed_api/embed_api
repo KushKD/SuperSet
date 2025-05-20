@@ -23,4 +23,22 @@ Once we have the access token, we need a guest_token
 
 Autherization Type: Bearer TOKEN
 
+## Send this JSON
+
+{
+  "user": {
+    "username": "guest",
+    "first_name": "Guest",
+    "last_name": "User"
+  },
+  "resources": [
+    {
+      "type": "dashboard",
+      "id": 5
+    }
+  ],
+  "rls": [],
+  "roles": ["Gamma"]
+}
+
 This service will give Access Token
