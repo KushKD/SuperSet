@@ -1,3 +1,6 @@
+
+//POST
+
 /api/v1/security/login
 
 {
@@ -6,3 +9,18 @@
 "refresh":true,
 "username":"superset"
 }
+
+/**
+* Response
+* access_token
+* refresh_token
+*/
+
+
+Once we have the access token, we need a guest_token
+
+/api/v1/security/guest_token/
+
+Autherization Type: Bearer TOKEN
+
+This service will give Access Token
