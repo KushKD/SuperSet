@@ -1,22 +1,30 @@
 sudo apt-get install postgresql-server-dev-all
 pip install flask-cors
+pip install apache-superset[cors]
 
 
+# CORS Enabling
 ENABLE_CORS = True
-CORS_OPTIONS = {
-    "supports_credentials": True,
-    "origins": ["http://localhost:3000"],
-    "methods": ["GET", "POST", "OPTIONS"],
-    "allow_headers": ["*"],
-}
+CORS_OPTIONS =
+    {
+        "supports_credentials": True,
+        "allow_headers": "*",
+        "expose_headers": "*",
+        "resources": "*",
+        "origins": ["http://localhost:4200","http://localhost:3000"] //4200 for angular , 3000 for react
+    }
+
+# Dashboard embedding
+GUEST_ROLE_NAME = "Gamma"
+GUEST_TOKEN_JWT_SECRET = "PASTE_GENERATED_SECRET_HERE"
+GUEST_TOKEN_JWT_ALGO = "HS256"
+GUEST_TOKEN_HEADER_NAME = "X-GuestToken"
+GUEST_TOKEN_JWT_EXP_SECONDS = 300 # 5 minutes
 
 TALISMAN_ENABLED = False
 WTF_CSRF_ENABLED = False
 
 ALLOW_IFRAME_EMBEDDING = True
-FEATURE_FLAGS = {
-    "EMBEDDED_SUPERSET": True
-}
 
 from superset.stats_logger import DummyStatsLogger
 STATS_LOGGER = DummyStatsLogger()
