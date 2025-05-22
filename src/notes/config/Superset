@@ -1,0 +1,92 @@
+import React, { useEffect } from 'react';
+import axios from 'axios';
+import { embedDashboard } from '@superset-ui/embedded-sdk';
+
+const Superset = () => {
+  const supersetUrl = 'http://localhost:8088';
+  const dashboardId = 'b4451485-3e76-404a-b2c0-aa467caef263';
+
+  //
+
+  useEffect(() => {
+    const getTokenAndEmbed = async () => {
+      try {
+        // 1. Login to Superset and get access token
+        const loginBody = {
+          username: 'superset',
+          password: 'superset',
+          provider: 'db',
+          refresh: true,
+        };
+
+        const loginResponse = await axios.post(
+          `${supersetUrl}/api/v1/security/login`,
+          loginBody,
+          { headers: { 'Content-Type': 'application/json' } }
+        );
+
+        const accessToken = loginResponse.data.access_token;
+
+        // 2. Generate guest token with required fields
+        const now = Math.floor(Date.now() / 1000);
+        const guestTokenBody = {
+          user: {
+            username: 'enbed_user',
+            first_name: 'enbed_user',
+            last_name: 'enbed_user',
+          },
+          resources: [
+            {
+              type: 'dashboard',
+              id: dashboardId,
+            },
+          ],
+          rls: [],
+          roles: ['ChartViewer'], // Must have dashboard access
+          iat: now,
+          exp: now + 60 * 60, // 1 hour expiry
+          aud: 'superset',
+          iss: 'superset-embed',
+        };
+
+        const guestTokenResponse = await axios.post(
+          `${supersetUrl}/api/v1/security/guest_token/`,
+          guestTokenBody,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${accessToken}`,
+            },
+          }
+        );
+
+        const guestToken = guestTokenResponse.data.token;
+        
+
+        // 3. Embed the dashboard
+        await embedDashboard({
+          id: dashboardId,
+          supersetDomain: supersetUrl,
+          mountPoint: document.getElementById('superset-container'),
+          fetchGuestToken: () => guestToken,
+          dashboardUiConfig: { hideTitle: false },
+        });
+
+        // Optional styling
+        const iframe = document.querySelector('iframe');
+        if (iframe) {
+          iframe.style.width = '100%';
+          iframe.style.minHeight = '100vh';
+        }
+      } catch (error) {
+        console.error('Error embedding Superset dashboard:', error);
+      }
+    };
+
+    getTokenAndEmbed();
+  }, []);
+
+  return <div id="superset-container"></div>;
+};
+
+export default Superset;
