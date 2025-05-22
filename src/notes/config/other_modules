@@ -1,6 +1,12 @@
 sudo apt-get install postgresql-server-dev-all
 pip install flask-cors
 pip install apache-superset[cors]
+pip install flask flask-cors pyjwt
+ pip install psycopg2-binary
+ pip install statsd 
+pip install flask flask-cors pyjwt
+
+
 
 
 # CORS Enabling
