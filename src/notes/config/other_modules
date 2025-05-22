@@ -120,4 +120,15 @@ EOF
 postman
 
 
+#### URL Embedding 
+ {/* <div className="App">
+      <iframe
+        title="Superset Dashboard"
+        src="http://localhost:8088/superset/dashboard/p/Me3a6B7PEp7/"
+        width="100%"
+        height="1000px"
+        frameBorder="0"
+        allowFullScreen
+        />  
 
+    </div> */}
